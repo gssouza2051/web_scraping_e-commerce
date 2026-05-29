@@ -5,7 +5,6 @@ Projeto para treinar extração massiva de dados em um ambiente controlado que s
 ## Fonte de dados
 
 - Site: [Books to Scrape](https://books.toscrape.com/) (sandbox para testes)
-https://books.toscrape.com/
 
 ## Objetivo
 
