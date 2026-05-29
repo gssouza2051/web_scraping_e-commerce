@@ -1,5 +1,6 @@
 
-# .\venv\Scripts\Activate.ps1
+# venv\Scripts\activate.bat
+# deactivate
 
 from selenium import webdriver
 
