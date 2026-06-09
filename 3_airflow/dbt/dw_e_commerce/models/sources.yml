@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: public
+    database: dbt_db
+    schema: public
+    tables:
+      - name: livros_todos
+        description: "Tabela principal com todos os livros extraídos"
+        columns:
+          - name: id
+            description: "ID único do registro"
+          - name: titulo
+            description: "Título do livro"
+          - name: preco
+            description: "Preço em GBP"
+          - name: avaliacao_texto
+            description: "Avaliação em texto (One, Two, etc)"
+          - name: avaliacao
+            description: "Avaliação numérica (1-5)"
+          - name: disponibilidade
+            description: "Texto de disponibilidade"
+          - name: estoque
+            description: "Quantidade disponível em estoque"
+          - name: estoque_baixo
+            description: "Indicador de estoque baixo (<5 unidades)"
+          - name: categoria
+            description: "Categoria do livro"
+          - name: url
+            description: "URL da página do produto"
+          - name: coletado_em
+            description: "Timestamp da coleta"
+
+  - name: public_seeds
+    database: dbt_db
+    schema: public_seeds
+    tables:
+      - name: books_to_scrape_20260528_235554
+        description: "Seed carregada no dbt com os livros extraídos"
+            

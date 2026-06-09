@@ -1,0 +1,42 @@
+name: 'dw_e_commerce'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dw_e_commerce'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dw_e_commerce:
+    +materialized: table
+    bronze:
+      +materialized: view
+      +schema: bronze
+    silver:
+      +materialized: view
+      +schema: silver
+    gold:
+      +materialized: table
+      +schema: gold
+      
+seeds:
+  dw_e_commerce:
+    +schema: seeds
+    +delimiter: ";"
+    
+vars:
+  start_date: '2025-01-01'
+  end_date: '2025-12-31'
+  
+on-run-start: "{{ log('Iniciando execução do dbt para DW e-commerce', info=true) }}"
+on-run-end: "{{ log('Execução do dbt concluída', info=true) }}"

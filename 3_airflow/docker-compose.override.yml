@@ -1,0 +1,8 @@
+services:
+  scheduler:
+    volumes:
+      - ./dbt/dw_e_commerce:/usr/local/airflow/dbt/dw_bootcamp
+
+  dag-processor:
+    volumes:
+      - ./dbt/dw_e_commerce:/usr/local/airflow/dbt/dw_bootcamp

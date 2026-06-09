@@ -1,0 +1,30 @@
+dw_e_commerce:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: dbt_db
+      schema: public
+      threads: 4
+      keepalives_idle: 0
+      search_path: public
+      sslmode: disable
+      connect_timeout: 10
+      
+    prod:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: dbt_db
+      schema: public
+      threads: 8
+      keepalives_idle: 0
+      search_path: public
+      sslmode: disable
+      connect_timeout: 10

@@ -1,0 +1,47 @@
+# Ambiente
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Saidas geradas
+1_scraping_setup/saida/
+*.xlsx
+*.parquet
+*.log
+*.pid
+
+# Arquivos locais do editor/dbt
+*.user.yml
