@@ -11,7 +11,7 @@ def obter_config_postgres() -> dict:
         "host": os.getenv("POSTGRES_HOST", "localhost"),
         "port": int(os.getenv("POSTGRES_PORTA", "5432")),
         "user": os.getenv("POSTGRES_USUARIO", "postgres"),
-        "password": os.getenv("POSTGRES_SENHA", "secreta007"),
+        "password": os.getenv("POSTGRES_SENHA", "postgres"),
         "dbname": os.getenv("POSTGRES_BANCO", "postgres"),
         "connect_timeout": int(os.getenv("POSTGRES_TIMEOUT_SEGUNDOS", "10")),
     }
