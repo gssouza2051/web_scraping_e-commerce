@@ -45,3 +45,6 @@ Thumbs.db
 
 # Arquivos locais do editor/dbt
 *.user.yml
+
+
+banco_postgres.py
